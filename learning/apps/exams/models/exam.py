@@ -12,7 +12,7 @@ class Exam(models.Model):
         verbose_name = "Exam"
         verbose_name_plural = "Exams"
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):
         return self.title
 
 
@@ -31,5 +31,5 @@ class TestBank(models.Model):
         verbose_name = "Test Bank"
         verbose_name_plural = "Test Banks"
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):
         return self.name
