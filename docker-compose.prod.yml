@@ -56,17 +56,17 @@ services:
   #           - driver: nvidia
   #             count: 1
   #             capabilities: [gpu]
-    # entrypoint: |
-    #   /bin/bash -c "
-    #   # Start ollama in background
-    #   /bin/ollama serve &
-    #   # Wait for server to be ready
-    #   sleep 5
-    #   # Pull models if they don't exist
-    #   /bin/ollama list | grep -q llama3.2 || /bin/ollama pull llama3.2
-    #   # Keep container running briefly then exit
-    #   sleep 2
-    #   "
+  # entrypoint: |
+  #   /bin/bash -c "
+  #   # Start ollama in background
+  #   /bin/ollama serve &
+  #   # Wait for server to be ready
+  #   sleep 5
+  #   # Pull models if they don't exist
+  #   /bin/ollama list | grep -q llama3.2 || /bin/ollama pull llama3.2
+  #   # Keep container running briefly then exit
+  #   sleep 2
+  #   "
 
 volumes:
   prod_postgres_data:
