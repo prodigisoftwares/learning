@@ -1,9 +1,10 @@
 from django.db import models
 
+from .abstract import TimestampedModel
 
-class Exam(models.Model):
+
+class Exam(TimestampedModel):
     title = models.CharField(max_length=255)
-    created = models.DateTimeField(auto_now_add=True)
     description = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
 
@@ -16,7 +17,25 @@ class Exam(models.Model):
         return self.title
 
 
-class TestBank(models.Model):
+class Topic(TimestampedModel):
+    exam = models.ForeignKey(
+        Exam,
+        related_name="topics",
+        on_delete=models.CASCADE,
+    )
+
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "Topic"
+        verbose_name_plural = "Topics"
+
+    def __str__(self):
+        return self.name
+
+
+class TestBank(TimestampedModel):
     exam = models.ForeignKey(
         Exam,
         related_name="banks",
@@ -24,7 +43,6 @@ class TestBank(models.Model):
     )
 
     name = models.CharField(max_length=255)
-    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created"]

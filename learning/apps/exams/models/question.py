@@ -1,17 +1,41 @@
 from django.db import models
 
-from .exam import TestBank
+from .abstract import TimestampedModel
+from .exam import TestBank, Topic
 
 
-class Question(models.Model):
+class Chapter(TimestampedModel):
+    topic = models.ForeignKey(
+        Topic,
+        related_name="chapters",
+        on_delete=models.CASCADE,
+    )
+
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "Chapter"
+        verbose_name_plural = "Chapters"
+
+    def __str__(self):
+        return self.name
+
+
+class Question(TimestampedModel):
     test_bank = models.ForeignKey(
         TestBank,
         related_name="questions",
         on_delete=models.CASCADE,
     )
 
+    chapter = models.ForeignKey(
+        Chapter,
+        related_name="questions",
+        on_delete=models.CASCADE,
+    )
+
     text = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created"]
@@ -22,7 +46,7 @@ class Question(models.Model):
         return self.text
 
 
-class QuestionOption(models.Model):
+class QuestionOption(TimestampedModel):
     question = models.ForeignKey(
         Question,
         related_name="choices",
@@ -34,7 +58,7 @@ class QuestionOption(models.Model):
     explanation = models.TextField(blank=True)
 
     class Meta:
-        ordering = ["-id"]
+        ordering = ["-created"]
         verbose_name = "Question Option"
         verbose_name_plural = "Question Options"
 

@@ -1,9 +1,10 @@
 from django.db import models
 
+from .abstract import TimestampedModel
 from .exam import Exam
 
 
-class AcronymFlashcard(models.Model):
+class AcronymFlashcard(TimestampedModel):
     exam = models.ForeignKey(
         Exam,
         related_name="flashcards",
@@ -12,7 +13,6 @@ class AcronymFlashcard(models.Model):
 
     front = models.TextField()
     back = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created"]
