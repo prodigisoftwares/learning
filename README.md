@@ -9,5 +9,3 @@ A web-based learning system using:
 Create your own custom study guides, learning methods, exams and flashcards.
 
 Track your progress.
-
-# learning
