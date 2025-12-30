@@ -2,9 +2,9 @@
 
 A web-based learning system using:
 
-* Django
-* Tailwind
-* Javascript/HTMX/Alpinejs
+- Django
+- Tailwind
+- Javascript/HTMX/Alpinejs
 
 Create your own custom study guides, learning methods, exams and flashcards.
 

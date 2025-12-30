@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import environ
 import os
+import sys
 from pathlib import Path
+
+import environ
 
 env = environ.Env(
     # set casting, default value
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "apps.core",
 ]
 
 MIDDLEWARE = [
@@ -92,8 +95,6 @@ DATABASES = {
 }
 
 # Use SQLite for tests to speed them up
-import sys
-
 if "test" in sys.argv:
     DATABASES["default"] = {
         "ENGINE": "django.db.backends.sqlite3",
