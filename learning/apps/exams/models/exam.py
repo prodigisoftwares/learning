@@ -1,11 +1,10 @@
 from django.db import models
 
-from .abstract import TimestampedModel
+from .abstract import DescriptiveModel, TimestampedModel
 
 
-class Exam(TimestampedModel):
+class Exam(DescriptiveModel, TimestampedModel):
     title = models.CharField(max_length=255)
-    description = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
 
     class Meta:
@@ -17,7 +16,7 @@ class Exam(TimestampedModel):
         return self.title
 
 
-class Topic(TimestampedModel):
+class Topic(DescriptiveModel, TimestampedModel):
     exam = models.ForeignKey(
         Exam,
         related_name="topics",
@@ -35,7 +34,7 @@ class Topic(TimestampedModel):
         return self.name
 
 
-class TestBank(TimestampedModel):
+class TestBank(DescriptiveModel, TimestampedModel):
     exam = models.ForeignKey(
         Exam,
         related_name="banks",

@@ -1,10 +1,10 @@
 from django.db import models
 
-from .abstract import TimestampedModel
+from .abstract import DescriptiveModel, TimestampedModel
 from .exam import TestBank, Topic
 
 
-class Chapter(TimestampedModel):
+class Chapter(DescriptiveModel, TimestampedModel):
     topic = models.ForeignKey(
         Topic,
         related_name="chapters",

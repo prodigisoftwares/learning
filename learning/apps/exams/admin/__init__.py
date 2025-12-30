@@ -29,5 +29,5 @@ class QuestionOptionAdmin(admin.ModelAdmin):
 
 @admin.register(AcronymFlashcard)
 class AcronymFlashcardAdmin(admin.ModelAdmin):
-    list_display = ("front", "exam", "created")
+    list_display = ("front", "deck", "created")
     search_fields = ("front",)
