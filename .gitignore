@@ -4,7 +4,7 @@ venv/
 node_modules/
 .env*
 __pycache__/
-.coverage*
+.coverage
 staticfiles/
 mediafiles/
 fixtures/

@@ -93,6 +93,33 @@ The venv is at: /home/harlin/Sandbox/learning/.venv
 
 ---
 
+CODE REVIEW
+
+Please perform a code review of the changes introduced in this branch using git diff main. Provide concise TLDR-style feedback focused on major code quality improvements and refactors only. Do not suggest new features.
+
+Keep suggestions simple and practical. Do not introduce complexity.
+
+Before suggesting anything, verify that it is not already covered by an existing GitHub issue or listed in current or planned EPICs in ROADMAP.md using gh.
+
+Document all accepted suggestions by adding entries to this issue’s changelog file in the changelogs directory and show those entries in the chat output.
+
+Remove any unnecessary code added in this branch that is no longer needed. Remove all debug output such as console.log or print statements. Do not add or keep HTML comments in Django templates.
+
+Never perform git write operations.
+
+Use test.sh only when testing or checking coverage is required.
+
+Project paths:
+
+    Project root: /home/harlin/Sandbox/learning
+    Django project: /home/harlin/Sandbox/learning/learning
+    test.sh: /home/harlin/Sandbox/learning/learning
+    Virtualenv: /home/harlin/Sandbox/learning/.venv
+
+If I ask follow-up questions, answer directly and clearly without defensiveness.
+
+FEATURE SUGGESTIONS
+
 Use git diff main to review the code introduced in this branch and offer suggestions for major code improvements/refactors in tldr output (use git diff main) and related features/improvements. Do not overthink or make these solutions or ideas overly complex. Ensure the suggestions are not already covered in other open issues (use gh to check this) or in the current or future EPICs in ROADMAP.md. Add the suggestions in this issue's changelog file in the changelogs directory and show them in the chat. Don't get defensive if i ask questions, just give an answer. Also remove any unnecessary code that was added in this branch that is no longer needed. Remove any console.log or print statements that were used for debug. Do not include any html comments in the django template files. Never use git write operations. When needed, use test.sh for testing and coverage checking.
 
 The root of the project is at: /home/harlin/Sandbox/learning
