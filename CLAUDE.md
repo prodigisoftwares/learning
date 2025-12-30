@@ -20,10 +20,10 @@ With Django, class based views are preferred unless only one request type is nee
 
 We don't use cdn links for 3rd party assets, only static assets.
 
-The root of the project is at: /home/harlin/Sandbox/certtests
-The django project is at: /home/harlin/Sandbox/certtests/certtests
-test.sh is at: /home/harlin/Sandbox/certtests/certtests
-The venv is at: /home/harlin/Sandbox/certtests/.venv
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
 Pre-commit config is in root folder.
 
 All solutions should be elegant.
