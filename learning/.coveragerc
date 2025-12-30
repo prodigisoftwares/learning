@@ -1,0 +1,10 @@
+[run]
+branch = True
+
+[report]
+omit =
+    config/settings.py
+exclude_lines =
+    pragma: no cover
+    def __str__\(self\):
+    def __repr__\(self\):
