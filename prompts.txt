@@ -1,0 +1,188 @@
+---
+
+Use gh to view issue #_, review CLAUDE.md, PROJECT_OVERVIEW.md, DEVELOPMENT.md files for appropriate guidance, then look through the project and see if this issue needs to be worked or is even necessary any longer. No need to run any tests. All of your output should be tldr style.
+
+---
+
+EPIC COMPLETION
+
+Use gh to view issue #_, PROJECT_OVERVIEW.md, ROADMAP.md files for appropriate guidance, then look through the project and see if all issues related to this epic issue have been completed. Do not add anything unless told to. No need to run any tests. All of your output should be tldr style.
+
+---
+
+ROADMAP & ISSUE GENERATION
+
+Review all PROJECT_OVERVIEW.md and see all of the changelog entries in the CHANGELOG.md file. I need you to generate a good roadmap (ROADMAP.md) to get us from where we are now to being competitive with known commercial competitors and beyond. We'll want to build Epic issues of the roadmap at a later time but design it in such a way that we'll be able to build epics from them that are cohesive and timing conscious. The way we want to build is with each increment even within sub issues of an epic, is that the product will be useful as we go. We're building the plane as we fly it so to speak. Ideally we would want that after completion of the first epic, that this project is minimally useful if only for the developer of this project.
+
+---
+
+Based on this epic description below, use gh to create the epic issue (DO NOT CREATE ANY ADDITIONAL ISSUES BESIDES THE EPIC ISSUE):
+
+...
+
+---
+
+About how many files would be touched to implement all of the details in this epic issue?
+
+---
+
+Break down the requirements of this epic into 5 or 6 evenly focused sub issues and then use gh to create them. Then use gh to update issue #71 with a listing of these sub-issues and order them in the order to be worked.
+
+COMMON WORKFLOW
+
+Use gh to view issue #_, review CLAUDE.md, PROJECT_OVERVIEW.md, DEVELOPMENT.md files for appropriate guidance, let's discuss how we want to tackle this issue. all of your output should be tldr style. Do not overthink or make this solution overly complex. Don't get defensive if i ask questions, just give an answer. Always source the venv of the project. Do not include any html comments in the django template files. Never use git write operations. Use test.sh to test new code and to view coverage. Ensure all lines of code are covered with unit tests except where it is too difficult to do so. When successfully done, generate a comprehensive summary of all work done. Write this as a changelong entry for this current branch in the appropriate changelog file in the changelogs subdir. Do not close the issue when we have finished.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+---
+
+Ensure that unit tests are covering this module as close to 100% as possible. Use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+or
+
+Ensure unit tests are covering these modules that are missing unit tests:
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+---
+
+Review CLAUDE.md for appropriate guidance on refactoring. Refactor this module into smaller focused modules based on the classes in this module. Never use git write operations. Use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+or
+
+Review CLAUDE.md for appropriate guidance on refactoring. Refactor this template into smaller focused templates into focused subdirs. Never use git write operations. Use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+or
+
+Review CLAUDE.md for appropriate guidance on refactoring. Refactor this test module into smaller focused test modules based on the test classes in this module. Never use git write operations. Use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+or
+
+Review CLAUDE.md for appropriate guidance on refactoring. This module is now at over 1000 lines and although it uses only one class, it is time to consider refactoring it. So, refactor this test module into smaller focused modules creating new focused classes for this module. Never use git write operations. Use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+---
+
+Use git diff main to review the code introduced in this branch and offer suggestions for major code improvements/refactors in tldr output (use git diff main) and related features/improvements. Do not overthink or make these solutions or ideas overly complex. Ensure the suggestions are not already covered in other open issues (use gh to check this) or in the current or future EPICs in ROADMAP.md. Add the suggestions in this issue's changelog file in the changelogs directory and show them in the chat. Don't get defensive if i ask questions, just give an answer. Also remove any unnecessary code that was added in this branch that is no longer needed. Remove any console.log or print statements that were used for debug. Do not include any html comments in the django template files. Never use git write operations. When needed, use test.sh for testing and coverage checking.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+---
+
+DOCUMENTATION
+
+Use git diff main to view code introduced in this branch vs main. If any of the code or features introduced in this branch affects the end-user (or an end-developer) or is new to them and undocumented, please make appropriate instructional documentation in the README.md file. For end-user, it should read as user instructions, not as marketing. If any of the code or steps taken is useful for either developer on this project, add it to DEVELOPMENT.md. Never use git write operations. No need to test code if you've only updated md files.
+
+---
+
+CHANGELOG DOCUMENTATION
+
+Using git diff main, see the diff in code introduced in this branch vs main branch and generate a comprehensive summary of all work done. Write this as a changelong entry for this current branch in the appropriate changelog file in the changelogs subdir. Ensure that there is only one consolidated changelog file per issue/MR. Never use git write operations. No need to test code if you've only updated md files.
+
+---
+
+Using git diff main, see the diff in code introduced in this branch vs main branch and generate a comprehensive summary of all work done. Using gh close this issue with summary of all work done for this branch. Do not add anything to the branch at this time. Never use git write operations. No need to test code at this point.
+
+END COMMON WORKFLOW
+
+---
+
+
+
+ISSUE REPORTING / BUG or ENHANCEMENT:
+
+Using gh, create this as an issue using the following details:
+
+Issue description:
+
+What I'm seeing:
+
+How it should be:
+
+Type: 
+
+Also enhance the summary of the issue for clarity.
+
+---
+Using gh, create this as a feature request issue using the following details:
+
+Feature request:
+
+Also enhance the summary of the issue for clarity.
+
+---
+FROM REVIEW FINDINGS
+
+Using gh, create this as a catch-all feature request issue using the following details:
+
+Feature request items:
+
+Also give context and reference the current issue number, enhance the summary of the issue for clarity.
+
+---
+
+WORKING BUGS
+
+Create a unit test that exposes this bug: _
+
+The unit test should fail unless it is a false report.
+
+After it fails as expected, please fix this bug.
+
+The root of the project is at: /home/harlin/Sandbox/learning
+The django project is at: /home/harlin/Sandbox/learning/learning
+test.sh is at: /home/harlin/Sandbox/learning/learning
+The venv is at: /home/harlin/Sandbox/learning/.venv
+
+Ex: When a user chooses an answer, clicks next and then clicks previous, the user is not taken to the same question as was there before.
+
+---
+
+CREATING ISSUES LEFTOVER FROM REVIEWS/IMPROVEMEN SUGGESTIONS
+
+For each of the following items, please use gh to create an issue:
+
+
+
+For the following create one issue to handle all of them:
+
+
+
+Also enhance the summary of each issue for clarity.
+
+Update each one mentioned in the current changelog with the issue number so that they can be tracked later if needed.
+
+---
